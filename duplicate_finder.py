@@ -2,6 +2,11 @@ import os # for system operations
 import hashlib # for check duplication
 from abc import ABC, abstractmethod
 
+
+# need a function or class that get all the files. in the directory. and send them to this class . 
+# then compare them and then create links. 
+
+
 # todo: create a file duplicator finder. 
 # todo: create cli for fast colaboration.
 # todo: has django-app structure in your mind.

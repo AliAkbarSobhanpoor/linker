@@ -7,11 +7,11 @@ def main():
     file2 = input("Please enter the second file name: ")
     
     duplicate_1 = SHADuplicateFinder(file1, file2)
-    duplicate_1.compare()
+    duplicate_1.base_compare_file()
 
     print("-"*20) 
 
     duplicate_2 = ByteDuplicateFinder(file1, file2)
-    duplicate_2.compare()
+    duplicate_2.base_compare_file()
 
 main()
