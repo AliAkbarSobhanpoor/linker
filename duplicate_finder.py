@@ -47,7 +47,12 @@ class DuplicateFinder(ABC):
         if self.file_1_size != self.file_2_size:
             print("Files are of different sizes.") # todo: remove this message.
             return False
-        
+        print("some other data")
+        print("some other data")
+        print("some other data")
+        print("some data.")
+
+        print("some other data")
         print("Files have the same size. Calculating hashes please wait...") # todo: remove this message.
         return self.compare()
 
