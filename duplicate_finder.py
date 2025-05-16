@@ -11,15 +11,6 @@ from abc import ABC, abstractmethod
 # todo: create cli for fast colaboration.
 # todo: has django-app structure in your mind.
 
-class Linker(ABC):
-    """
-    Abstract base class for create  duplicate files.
-    """
-
-    
-
-
-
 
 class DuplicateFinder(ABC):
     """
@@ -29,6 +20,7 @@ class DuplicateFinder(ABC):
         2. Compare files byte by byte. -> user ByteDuplicateFinder
     """
     def __init__(self, file_1, file_2):
+        super().__init__()
         if not os.path.exists(file_1):
             raise FileNotFoundError(f"{file_1} does not exist.")
         else:
