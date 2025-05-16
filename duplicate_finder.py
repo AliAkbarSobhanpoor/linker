@@ -11,6 +11,15 @@ from abc import ABC, abstractmethod
 # todo: create cli for fast colaboration.
 # todo: has django-app structure in your mind.
 
+class Linker(ABC):
+    """
+    Abstract base class for create  duplicate files.
+    """
+
+    
+
+
+
 
 class DuplicateFinder(ABC):
     """
@@ -46,6 +55,10 @@ class DuplicateFinder(ABC):
         """
         if self.file_1_size != self.file_2_size:
             print("Files are of different sizes.") # todo: remove this message.
+            return False
+        
+        if self.file_1_size == 0 or self.file_2_size == 0:
+            print("one of the files or 0 byte. the default result if the file is empty is False") # todo: remove this message.
             return False
         
         print("Files have the same size. Calculating hashes please wait...") # todo: remove this message.
